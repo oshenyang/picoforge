@@ -23,6 +23,8 @@ PicoForge is a modern desktop application for configuring and managing Pico FIDO
 - Real-time system logging and diagnostics
 - Support for multiple hardware variants and vendors
 
+> **Alpha Status**: This application is currently under active development and in alpha stage. Users should expect bugs and are encouraged to report them. The app has been tested on Linux with the official Raspberry Pi Pico2 and currently supports Pico FIDO firmware version 7.2 only. Release binaries will be built and published soon.
+
 ## Screenshots
 
 <div align="center">
@@ -225,6 +227,7 @@ See [LICENSE](LICENSE) for full details.
 
 ## Support
 
+- **Discord**: [Join our Discord server](https://discord.gg/6wYBpSHJY2) for community support and interaction
 - **Issues**: [GitHub Issues](https://github.com/librekeys/picoforge/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/librekeys/picoforge/discussions)
 

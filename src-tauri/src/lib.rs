@@ -83,7 +83,7 @@ struct FullDeviceStatus {
     secure_lock: bool,
 }
 
-// Custom Error type for easy returning to frontend
+// Custom Error types
 #[derive(Debug, thiserror::Error)]
 enum AppError {
     #[error("PCSC Error: {0}")]
@@ -310,12 +310,10 @@ fn write_config(config: AppConfigInput) -> Result<String, AppError> {
 
     // Options (Tag 0x06)
     if let (Some(dim), Some(cycle), Some(steady)) = (config.led_dimmable, config.power_cycle_on_reset, config.led_steady) {
-        let mut opts: u16 = 0; // Changed from u8 to u16
+        let mut opts: u16 = 0;
         
         if dim { opts |= OPT_LED_DIMMABLE; }
         
-        // Logic check: "Power Cycle On" means the DISABLE flag is NOT set.
-        // If "Power Cycle On" is false, we SET the DISABLE flag.
         if !cycle { opts |= OPT_DISABLE_POWER_RESET; }
         
         if steady { opts |= OPT_LED_STEADY; }
@@ -331,14 +329,14 @@ fn write_config(config: AppConfigInput) -> Result<String, AppError> {
         if enabled { curves |= CURVE_SECP256K1; }
 
         tlv.push(TAG_CURVES);
-        tlv.push(0x04); // Length is 4
+        tlv.push(0x04);
         tlv.write_u32::<BigEndian>(curves).unwrap(); 
     }
 
     // LED Driver (Tag 0x0C)
     if let Some(val) = config.led_driver {
         tlv.push(TAG_LED_DRIVER);
-        tlv.push(0x01); // Length 1
+        tlv.push(0x01);
         tlv.push(val);
     }
 
