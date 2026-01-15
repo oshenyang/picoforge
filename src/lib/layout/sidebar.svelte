@@ -59,8 +59,8 @@
   <Sidebar.Root collapsible="icon">
     <Sidebar.Header>
       <div class="flex items-center gap-3 p-2">
-        <img src="/pico-forge.svg" alt="PicoForge Logo" class="h-8 w-8 rounded-sm shadow-sm" />
-        <span class="font-bold text-lg tracking-tight group-data-[collapsible=icon]:hidden">PicoForge</span>
+        <img src="/in.suyogtandel.picoforge.svg" alt="PicoForge Logo" class="h-12 w-12 shadow-sm" />
+        <span class="font-bold text-xl tracking-tight group-data-[collapsible=icon]:hidden">PicoForge</span>
       </div>
     </Sidebar.Header>
 
