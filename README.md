@@ -1,6 +1,6 @@
-# PicoForge
-
 <div align="center">
+
+# PicoForge
 
 <img src="static/in.suyogtandel.picoforge.svg" width="512" height="512" alt="PicoForge Logo">
 
